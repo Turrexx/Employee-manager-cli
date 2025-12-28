@@ -1,0 +1,11 @@
+# Compiled binaries
+employee_manager
+*.exe
+*.o
+
+# Editor files
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
