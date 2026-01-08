@@ -31,3 +31,28 @@ int add_note(Employee *e, const char *text) {
     e->note_count++;
     return 1;
 }
+
+void print_availability(const Employee *e) {
+    static const char *days[] = {
+        "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
+    };
+    printf("Employee: %s (%s)\n", e->name, e->title);
+    
+
+    for (int i = 0; i < e->availability_count; i++) {
+        printf("Availability %d: %-3s %02d:00-%02d:00\n", 
+            i + 1, 
+            days[e->availability[i].day], 
+            e->availability[i].start_hour, 
+            e->availability[i].end_hour);
+    }
+
+}
+
+void print_notes(const Employee *e){
+    for (int i = 0; i < e->note_count; i++) {
+        printf("Note %d: %s\n", i + 1, e->notes[i].text);
+    }
+}
+
+

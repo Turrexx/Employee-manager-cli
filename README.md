@@ -43,6 +43,10 @@ employee-manager/
   - `add_availability()`
   - `add_note()`
 
+### 2025-01-07
+- Introduced UI functions to display main login screen.
+- `get_id_input()` added
+
 
 ## Building Project
 ### Requirements

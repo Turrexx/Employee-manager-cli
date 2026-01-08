@@ -5,6 +5,10 @@
 #define MAX_NOTES 5
 #define NOTE_LENGTH 100
 
+typedef enum {
+    ROLE_EMPLOYEE,
+    ROLE_MANAGER
+} Role;
 
 typedef struct {
     int day;
@@ -20,6 +24,7 @@ typedef struct {
     int id;
     char name[50];
     char title[50];
+    Role role;
 
     Availability availability[MAX_AVAILABILITY];
     int availability_count;
